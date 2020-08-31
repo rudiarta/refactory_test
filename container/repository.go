@@ -11,5 +11,13 @@ func InjectRepository(c *dig.Container) *dig.Container {
 		panic(err)
 	}
 
+	if err := c.Provide(repository.NewCartRepository); err != nil {
+		panic(err)
+	}
+
+	if err := c.Provide(repository.NewProductRepository); err != nil {
+		panic(err)
+	}
+
 	return c
 }

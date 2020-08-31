@@ -10,5 +10,9 @@ func InjectController(c *dig.Container) *dig.Container {
 		panic(err)
 	}
 
+	if err := c.Provide(controller.NewProductController); err != nil {
+		panic(err)
+	}
+
 	return c
 }
