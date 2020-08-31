@@ -1,0 +1,4 @@
+development:
+    dialect: mysql
+    datasource: root:maulapor@tcp(127.0.0.1:3306)/maulapor?parseTime=true
+    dir: migrations
